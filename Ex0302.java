@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ex0302 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		 
 		Scanner sc = new Scanner(System.in);
 		ArrayQueue queue = new ArrayQueue(5);
 		
@@ -16,7 +16,10 @@ public class Ex0302 {
 			
 			int num = sc.nextInt();
 			
-			if(num == 0) break;
+			if(num == 0) {
+				System.exit(0);
+				break;
+			}
 			
 			int x;
 			
