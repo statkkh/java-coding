@@ -3,6 +3,7 @@ import java.util.Stack;
 
 // https://www.acmicpc.net/problem/1874
 
+// String.valueOf는 int형이든 double형이든 boolean형이든 String객체로 만든다.
 public class Ex0403 {
     
     public static void main(String[] args) {

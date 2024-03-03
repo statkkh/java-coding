@@ -1,7 +1,9 @@
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.StringTokenizer;
 
-// https://www.acmicpc.net/problem/1874
+//www.acmicpc.net/problem/10828
+//  StringBuilder : String을 합치는 작업 시 하나의 대안
 
 public class Ex0404 {
     
@@ -10,29 +12,50 @@ public class Ex0404 {
         StringBuilder sb = new StringBuilder();
         Stack<Integer> stack = new Stack<>();
         int n = sc.nextInt();
+        
+        for(int i = 0; i < n; i++){
+            String str = sc.nextLine();
+            StringTokenizer st = new StringTokenizer(str);
+            String cmd = st.nextToken(); // 공백 기준 앞 뒤 자르기
+
+            switch (cmd) {
+                case "push":
+                    int x = Integer.parseInt(st.nextToken());
+                    stack.push(x);
+                    break;
+                case "pop":
+                    if(stack.isEmpty()) {
+                        sb.append(-1).append("\n");
+                    }else{
+                        sb.append(stack.pop()).append("\n");
+                    }
+                    stack.pop();
+                    break;
+                case "size":
+                    sb.append(stack.size()).append("\n");
+                    break;
+                case "empty":
+                    if(stack.isEmpty()){
+                        sb.append(1).append("\n");
+                    }else{
+                        sb.append(0).append("\n");
+                    }
+                    break;
+                case "top":
+                    if(stack.isEmpty()){
+                        sb.append(-1).append("\n");
+                    }else{
+                        sb.append(stack.peek()).append("\n");
+
+                    }
+                    break;                
+
+                default:
+                    break;
+            }
+        }
+        System.out.println(sb.toString());
         sc.close();
-        int top = 0;
-        while(n > 0){
-            int m = sc.nextInt();
-            if(m > top) {
-                for(int i = top + 1; i <= m ; i++) {
-                    stack.push(i);
-                    sb.append("+").append("\n");
-                }
-                top = m;
-            }
-            
-            if(stack.peek() != m){
-                sb.append("No").append("\n");
-                return;
-            }
-            
-            stack.pop();
-            sb.append("-").append("\n");
-
-            n--;
-        } 
-
 
     }
 }

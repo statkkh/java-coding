@@ -10,6 +10,8 @@ public class Ex0405 {
         Stack<Integer> stack = new Stack<>();
         int n = sc.nextInt();
         
+        // String s;
+
         for(int i = 0 ; i < n ; i++) {
 
             int k = sc.nextInt();
