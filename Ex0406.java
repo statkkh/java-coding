@@ -11,9 +11,9 @@ public class Ex0406 {
         // result = Solution(a,b);
 
         Solution solution = new Solution();
-        result = solution.solution(a, b);
-        System.out.println(result);
-        
+        // result = solution.solution(a, b);
+        // System.out.println(result);
+        sc.close();
     }
 }
 

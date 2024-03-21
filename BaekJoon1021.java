@@ -1,6 +1,5 @@
 
 
-package java_codingtest;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -24,7 +23,7 @@ public class BaekJoon1021 {
 		int m = sc.nextInt();
 		int arr[] = new int[m];
 		
-		for(int i = 0 ; i< m ; i++) {
+		for(int i = 0 ; i < m ; i++) {
 			arr[i] = sc.nextInt();
 		}
 		

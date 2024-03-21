@@ -1,4 +1,4 @@
-package java_codingtest;
+ 
 
 import java.util.*;
 

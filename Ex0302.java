@@ -1,4 +1,3 @@
-package java_codingtest;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -6,7 +5,7 @@ import java.util.Scanner;
 public class Ex0302 {
 
 	public static void main(String[] args) {
-		 
+								
 		Scanner sc = new Scanner(System.in);
 		ArrayQueue queue = new ArrayQueue(5);
 		
@@ -45,7 +44,7 @@ public class Ex0302 {
 					queue.dump();
 					break;								
 			}
-
+			sc.close();
 		}
 	}
 

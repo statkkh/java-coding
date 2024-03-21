@@ -16,6 +16,8 @@ class Solution {
         a = numbers[0] *numbers[1]; 
         b = numbers[numbers.length-1] * numbers[numbers.length-2];
         
+        // Collections.
+        
         return a > b ? a:b;
     }
 }
