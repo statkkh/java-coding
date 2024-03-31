@@ -13,24 +13,23 @@ public class Ex0608 {
                     set.add(numbers[i] + numbers[j]);
                 }
             }
-
+            int []result = new int[2];
             // List<Integer> list = new ArrayList<>(set);
-            Interator<Integer> list = set.iterator();        
+            // Interator<Integer> list = set.iterator();        
             
             // Collections.sort(list);
             
-            int[] result = new int[set.size()];
+            // int[] result = new int[set.size()];
 
             // for (int i = 0; i < list.size(); i++) {
             //     result[i] = list.get(i);
             // } 
             
-            while(list.hasNext()){
+            // while(list.hasNext()){
                 
-            }
+            // }
             
             return result;
         }
     }  
 }
-     
