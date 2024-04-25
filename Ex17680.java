@@ -25,20 +25,20 @@ class Solution {
         
         List<String> list = new ArrayList<>();
         
+        if(cacheSize == 0) return cities.length*5;
         for(int i = 0 ; i < cities.length ; i++){
-
+            String city = cities[i].toLowerCase();
             if(!list.contains(cities[i])){
                 // full
-                if(list.size() >= cacheSize){
+                if(list.size() == cacheSize){
                     list.remove(0);
                 }
-                list.add(cities[i]);
+                list.add(city);
                 answer+=5;
             }
-            
-            if(list.contains(cities[i])){
-                list.remove(cities[i]);
-                list.add(cities[i]);
+            if(list.contains(city)){
+                list.remove(city);
+                list.add(city);
                 answer+=1;
             }            
         }
